@@ -1,7 +1,7 @@
-import profileImage from "./assets/img/profile.jpg"
-import profileImageR from "./assets/img/profileR.jpg"
-import profileImageM from "./assets/img/profileM.jpg"
-import profileImageT from "./assets/img/profileT.jpg"
+import profileImage from "./images/profile.jpg"
+import profileImageR from "./images/profileR.jpg"
+import profileImageM from "./images/profileM.jpg"
+import profileImageT from "./images/profileT.jpg"
 
 export const profiles = [
     {

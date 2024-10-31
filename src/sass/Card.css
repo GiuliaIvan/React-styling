@@ -1,4 +1,5 @@
 .card {
+  background-color: violet;
   position: relative;
   width: 90%;
   max-width: 400px;
@@ -41,7 +42,8 @@
 .profile-image {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -57,7 +59,7 @@
 }
 
 .verified-icon {
-  color: #4caf50; /* Green color for verified icon */
+  color: #4CAF50; /* Green color for verified icon */
   margin-left: 10px;
 }
 
@@ -151,7 +153,7 @@ h3 {
 }
 
 .dislike {
-  color: #ff5a5f; /* Red color for dislike */
+  color: #ff6a6a; /* Red color for dislike */
 }
 
 .star {
@@ -159,7 +161,7 @@ h3 {
 }
 
 .like {
-  color: #4caf50; /* Green color for like */
+  color: #4CAF50; /* Green color for like */
 }
 
 /* Ensure icons are centered */
@@ -167,4 +169,4 @@ h3 {
   margin: 0;
   width: 50%;
   height: 50%;
-}
+}/*# sourceMappingURL=Card.css.map */

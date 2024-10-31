@@ -1,12 +1,14 @@
 import './App.css';
-import Button from './inline-styling/Button';
-//import ProfileManager from './sass/ProfileManager';
+// import ThemeSwitcher from './dynamic-inlineStyle/themeSwitch';
+import ProfileManager from './sass/ProfileManager';
 
 function App() {
 
   return (
     <div className='app'>
-      <Button text='Button' />
+      <ProfileManager />
+        {/* <Button text='Button' /> */}
+        {/* <ThemeSwitcher /> */}
     </div>
   );
 }

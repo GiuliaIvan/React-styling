@@ -1,0 +1,197 @@
+$primary-color: #ff6a6a;
+$verified-color: #4CAF50;
+$button-size: 60px;
+$border-radius: 15px;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+$font-family: "Arial", sans-serif;
+
+.card {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 20px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    font-family: $font-family;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    .profile-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+
+    .profile-info {
+        padding: 0 20px 20px 20px;
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .location-info,
+        .distance-info,
+        .looking-for-info {
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            color: #777;
+            margin: 5px 0;
+        }
+
+        .interests {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center; /* Center buttons in the middle */
+            align-items: center;
+            gap: 10px; /* Space between buttons to make them closer */
+            margin-top: 20px;
+        }
+    }
+
+    .interest {
+        background-color: hsla(122, 39%, 49%, 0.4);
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+  
+.swipe-left {
+    transform: translateX(-100%) rotate(-15deg);
+    opacity: 0;
+}
+
+.swipe-right {
+    transform: translateX(100%) rotate(15deg);
+    opacity: 0;
+}
+
+.swipe-up {
+    transform: translateY(-100%) rotate(-5deg);
+    opacity: 0;
+}
+
+.verified-icon {
+    color: $verified-color; /* Green color for verified icon */
+    margin-left: 10px;
+}
+
+.icon {
+    margin-right: 8px;
+    color: $primary-color; /* Pink color for icons */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 15px 0;
+}
+
+h3 {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.about {
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.action-btn {
+    border: 2px solid black; /* Black border for buttons */
+    background: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    width: $button-size; /* Standard width for round buttons */
+    height: $button-size; /* Standard height for round buttons */
+    border-radius: 50%; /* Makes the button round */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0; /* Ensure no extra padding */
+
+    &:hover {
+        border-color: #ff5a5f; /* Darker border on hover */
+        transform: scale(1.1); /* Make the button slightly larger */
+    }
+
+    /* Ensure the button stays interactive after being clicked */
+    &:focus,
+    &:active {
+        outline: none; /* Remove default outline on click */
+        border-color: #ff5a5f; /* Keep the same border color as hover */
+        transform: scale(1.1); /* Keep the same scale as hover */
+    }
+
+    &.star {
+        width: 45px; /* Smaller width for star button */
+        height: 45px; /* Smaller height for star button */
+        border-radius: 50%; /* Ensures it remains round */
+    }
+}
+
+.dislike {
+    color: $primary-color; /* Red color for dislike */
+}
+
+.star {
+    color: #ffbf00; /* Gold color for favorite */
+}
+
+.like {
+    color: $verified-color; /* Green color for like */
+}
+
+/* Ensure icons are centered */
+.action-btn svg {
+    margin: 0;
+    width: 50%;
+    height: 50%;
+}
+
+@mixin button-style($color, $width: $button-size, $height: $button-size) {
+    border: 2px solid $color;
+    background: none;
+    border-radius: 50%;
+    width: $width;
+    height: $height;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        border-color: $button-hover-color;
+        transform: scale(1.1);
+    }
+}
